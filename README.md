@@ -14,4 +14,4 @@ I used the free dataset of Reddit comment provided by
 https://dabblingwithdata.wordpress.com/2015/08/03/free-dataset-all-reddit-comments-available-for-download/
 
 ## Model Architecture
-![Image](https://github.com/Rowing0914/Dynamic_Context_Generative_Model_keras/blob/master/images/model.png)
+![Image](https://github.com/Rowing0914/Dynamic_Context_Generative_Model_keras/blob/master/DCGM_I/images/model.png)

@@ -17,7 +17,7 @@ class DataPreparation():
 	def data_preprocessing(self):
 		# Read the data and append SENTENCE_START and SENTENCE_END tokens
 		print("Reading CSV file...")
-		with open('data_less_than_13.csv', 'rb') as f:
+		with open('reddit-comments-2015-08.csv', 'rb') as f:
 			reader = csv.reader(f, skipinitialspace=True)
 			reader.next()
 			# Split full comments into sentences
@@ -26,6 +26,7 @@ class DataPreparation():
 				if ''.join(x).strip():
 					texts.append(nltk.sent_tokenize(x[0].decode('utf-8').lower()))
 			sentences = itertools.chain(*texts)
+			texts = []
 			# Append SENTENCE_START and SENTENCE_END
 			sentences = ["%s %s %s" % (self.sentence_start_token, x, self.sentence_end_token) for x in sentences]
 		print("Parsed %d sentences." % (len(sentences)))
